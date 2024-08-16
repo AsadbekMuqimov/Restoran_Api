@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banner List</title>
+</head>
+<body>
+    <h1>Banner List</h1>
+    <ul>
+        {% for banner in banners %}
+        <li><a href="{% url 'banner_detail' banner.pk %}">{{ banner.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'banner_create' %}">Create new banner</a>
+</body>
+</html>
